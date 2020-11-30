@@ -1,7 +1,6 @@
-////
-//// Created by Mengyu Li on 2018-11-02.
-//// Copyright (c) 2018 hujiang.com. All rights reserved.
-////
+//
+// Created by Mengyu Li on 2020/6/16.
+// Copyright (c) 2020 Mengyu Li. All rights reserved.
 //
 
 public protocol Compatible {

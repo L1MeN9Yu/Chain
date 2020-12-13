@@ -6,7 +6,7 @@
 
 import UIKit.UILabel
 
-public extension ChainBox where T == UILabel {
+public extension ChainBox where T: UILabel {
     @discardableResult
     func text(_ text: String?) -> ChainBox<T> {
         value.text = text

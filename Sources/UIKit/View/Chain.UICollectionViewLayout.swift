@@ -8,7 +8,7 @@ import UIKit.UICollectionViewLayout
 
 extension UICollectionViewFlowLayout: Compatible {}
 
-public extension ChainBox where T == UICollectionViewFlowLayout {
+public extension ChainBox where T: UICollectionViewFlowLayout {
     @discardableResult
     func itemSize(_ itemSize: CGSize = .zero) -> ChainBox<T> {
         value.itemSize = itemSize

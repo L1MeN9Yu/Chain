@@ -6,7 +6,7 @@
 
 import UIKit.UITextField
 
-public extension ChainBox where T == UITextField {
+public extension ChainBox where T: UITextField {
     @discardableResult
     func text(_ text: String?) -> ChainBox<T> {
         value.text = text

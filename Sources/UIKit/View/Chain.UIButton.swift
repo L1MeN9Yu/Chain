@@ -6,7 +6,7 @@
 
 import UIKit.UIButton
 
-public extension ChainBox where T == UIButton {
+public extension ChainBox where T: UIButton {
     @discardableResult
     func titleFont(font: UIFont) -> ChainBox<T> {
         value.titleLabel?.font = font

@@ -6,7 +6,7 @@
 
 import UIKit.UIImageView
 
-public extension ChainBox where T == UIImageView {
+public extension ChainBox where T: UIImageView {
     @discardableResult
     func image(_ image: UIImage?) -> ChainBox<T> {
         value.image = image

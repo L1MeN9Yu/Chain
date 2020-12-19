@@ -34,9 +34,9 @@ public extension ChainBox where T: UIView {
     }
 
     @discardableResult
-    func add(to supperView: UIView) -> T {
-        supperView.addSubview(value)
-        return value
+    func tintColor(_ tintColor: UIColor?) -> ChainBox<T> {
+        value.tintColor = tintColor
+        return value.x
     }
 
     @discardableResult
@@ -50,8 +50,7 @@ public extension ChainBox where T: UIView {
     func shadow(color: UIColor? = nil,
                 offset: CGSize = CGSize(width: 0.0, height: -3.0),
                 opacity: Float = 0.0,
-                radius: CGFloat) -> ChainBox<T>
-    {
+                radius: CGFloat) -> ChainBox<T> {
         value.layer.shadowColor = color?.cgColor
         value.layer.shadowOffset = offset
         value.layer.shadowOpacity = opacity
@@ -62,8 +61,7 @@ public extension ChainBox where T: UIView {
     @discardableResult
     func corners(_ corners: UIRectCorner = .allCorners,
                  radius: CGFloat,
-                 isReset: Bool = false) -> ChainBox<T>
-    {
+                 isReset: Bool = false) -> ChainBox<T> {
         value.layoutIfNeeded()
 
         if #available(iOS 11, *) {
@@ -88,8 +86,8 @@ public extension ChainBox where T: UIView {
             } else {
                 if isReset { value.layer.cornerRadius = 0 }
                 let path = UIBezierPath(roundedRect: value.bounds,
-                                        byRoundingCorners: corners,
-                                        cornerRadii: CGSize(width: radius, height: radius))
+                    byRoundingCorners: corners,
+                    cornerRadii: CGSize(width: radius, height: radius))
                 let mask = CAShapeLayer()
                 mask.path = path.cgPath
                 value.layer.mask = mask
@@ -99,6 +97,12 @@ public extension ChainBox where T: UIView {
         value.layer.masksToBounds = true
 
         return value.x
+    }
+
+    @discardableResult
+    func add(to supperView: UIView) -> T {
+        supperView.addSubview(value)
+        return value
     }
 }
 

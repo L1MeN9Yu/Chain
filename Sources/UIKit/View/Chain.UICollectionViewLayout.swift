@@ -44,6 +44,30 @@ public extension ChainBox where T: UICollectionViewFlowLayout {
         value.sectionInset = sectionInset
         return value.x
     }
+
+    @discardableResult
+    func headerReferenceSize(_ headerReferenceSize: CGSize) -> ChainBox<T> {
+        value.headerReferenceSize = headerReferenceSize
+        return value.x
+    }
+
+    @discardableResult
+    func footerReferenceSize(_ footerReferenceSize: CGSize) -> ChainBox<T> {
+        value.footerReferenceSize = footerReferenceSize
+        return value.x
+    }
+
+    @discardableResult
+    func sectionHeadersPinToVisibleBounds(_ sectionHeadersPinToVisibleBounds: Bool) -> ChainBox<T> {
+        value.sectionHeadersPinToVisibleBounds = sectionHeadersPinToVisibleBounds
+        return value.x
+    }
+
+    @discardableResult
+    func sectionFootersPinToVisibleBounds(_ sectionFootersPinToVisibleBounds: Bool) -> ChainBox<T> {
+        value.sectionFootersPinToVisibleBounds = sectionFootersPinToVisibleBounds
+        return value.x
+    }
 }
 
 #endif

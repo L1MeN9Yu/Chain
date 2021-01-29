@@ -26,19 +26,19 @@ public extension ChainBox where T: UILabel {
     }
 
     @discardableResult
-    func textAlignment(_ textAlignment: NSTextAlignment = .natural) -> ChainBox<T> {
+    func textAlignment(_ textAlignment: NSTextAlignment) -> ChainBox<T> {
         value.textAlignment = textAlignment
         return value.x
     }
 
     @discardableResult
-    func numberOfLines(_ numberOfLines: Int = 1) -> ChainBox<T> {
+    func numberOfLines(_ numberOfLines: Int) -> ChainBox<T> {
         value.numberOfLines = numberOfLines
         return value.x
     }
 
     @discardableResult
-    func lineBreakMode(_ lineBreakMode: NSLineBreakMode = .byTruncatingTail) -> ChainBox<T> {
+    func lineBreakMode(_ lineBreakMode: NSLineBreakMode) -> ChainBox<T> {
         value.lineBreakMode = lineBreakMode
         return value.x
     }

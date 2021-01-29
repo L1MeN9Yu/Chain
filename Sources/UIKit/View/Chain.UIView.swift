@@ -10,7 +10,7 @@ extension UIView: Compatible {}
 
 public extension ChainBox where T: UIView {
     @discardableResult
-    func isHidden(_ isHidden: Bool = false) -> ChainBox<T> {
+    func isHidden(_ isHidden: Bool) -> ChainBox<T> {
         value.isHidden = isHidden
         return value.x
     }
@@ -40,18 +40,14 @@ public extension ChainBox where T: UIView {
     }
 
     @discardableResult
-    func border(color: UIColor? = nil, width: CGFloat = 0) -> ChainBox<T> {
+    func border(color: UIColor?, width: CGFloat) -> ChainBox<T> {
         value.layer.borderColor = color?.cgColor
         value.layer.borderWidth = width
         return value.x
     }
 
     @discardableResult
-    func shadow(color: UIColor? = nil,
-                offset: CGSize = CGSize(width: 0.0, height: -3.0),
-                opacity: Float = 0.0,
-                radius: CGFloat) -> ChainBox<T>
-    {
+    func shadow(color: UIColor?, offset: CGSize, opacity: Float, radius: CGFloat) -> ChainBox<T> {
         value.layer.shadowColor = color?.cgColor
         value.layer.shadowOffset = offset
         value.layer.shadowOpacity = opacity
@@ -60,10 +56,7 @@ public extension ChainBox where T: UIView {
     }
 
     @discardableResult
-    func corners(_ corners: UIRectCorner = .allCorners,
-                 radius: CGFloat,
-                 isReset: Bool = false) -> ChainBox<T>
-    {
+    func corners(_ corners: UIRectCorner, radius: CGFloat, isReset: Bool) -> ChainBox<T> {
         value.layoutIfNeeded()
 
         if #available(iOS 11, *) {

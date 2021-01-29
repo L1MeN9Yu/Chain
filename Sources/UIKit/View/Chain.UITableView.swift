@@ -25,7 +25,7 @@ public extension ChainBox where T: UITableView {
     }
 
     @discardableResult
-    func separatorInset(_ separatorInset: UIEdgeInsets = .zero) -> ChainBox<T> {
+    func separatorInset(_ separatorInset: UIEdgeInsets) -> ChainBox<T> {
         value.separatorInset = separatorInset
         return value.x
     }
@@ -54,7 +54,7 @@ public extension ChainBox where T: UITableView {
     }
 
     @discardableResult
-    func disableContentInset(_ disableContentInset: Bool = true) -> ChainBox<T> {
+    func disableContentInset(_ disableContentInset: Bool) -> ChainBox<T> {
         if #available(iOS 11, *) {
             value.contentInsetAdjustmentBehavior = .never
         }

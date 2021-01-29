@@ -32,19 +32,19 @@ public extension ChainBox where T: UITextField {
     }
 
     @discardableResult
-    func textAlignment(_ textAlignment: NSTextAlignment = .left) -> ChainBox<T> {
+    func textAlignment(_ textAlignment: NSTextAlignment) -> ChainBox<T> {
         value.textAlignment = textAlignment
         return value.x
     }
 
     @discardableResult
-    func borderStyle(_ borderStyle: UITextField.BorderStyle = .none) -> ChainBox<T> {
+    func borderStyle(_ borderStyle: UITextField.BorderStyle) -> ChainBox<T> {
         value.borderStyle = borderStyle
         return value.x
     }
 
     @discardableResult
-    func placeholder(_ placeholder: String? = nil) -> ChainBox<T> {
+    func placeholder(_ placeholder: String?) -> ChainBox<T> {
         value.placeholder = placeholder
         return value.x
     }
@@ -62,20 +62,20 @@ public extension ChainBox where T: UITextField {
     }
 
     @discardableResult
-    func clearButtonMode(_ clearButtonMode: UITextField.ViewMode = .never) -> ChainBox<T> {
+    func clearButtonMode(_ clearButtonMode: UITextField.ViewMode) -> ChainBox<T> {
         value.clearButtonMode = clearButtonMode
         return value.x
     }
 
     @discardableResult
-    func leftView(_ leftView: UIView?, mode: UITextField.ViewMode = .never) -> ChainBox<T> {
+    func leftView(_ leftView: UIView?, mode: UITextField.ViewMode) -> ChainBox<T> {
         value.leftView = leftView
         value.leftViewMode = mode
         return value.x
     }
 
     @discardableResult
-    func rightView(_ rightView: UIView?, mode: UITextField.ViewMode = .never) -> ChainBox<T> {
+    func rightView(_ rightView: UIView?, mode: UITextField.ViewMode) -> ChainBox<T> {
         value.rightView = rightView
         value.rightViewMode = mode
         return value.x

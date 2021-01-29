@@ -32,19 +32,19 @@ public extension ChainBox where T: UITextView {
     }
 
     @discardableResult
-    func textAlignment(_ textAlignment: NSTextAlignment = .natural) -> ChainBox<T> {
+    func textAlignment(_ textAlignment: NSTextAlignment) -> ChainBox<T> {
         value.textAlignment = textAlignment
         return value.x
     }
 
     @discardableResult
-    func isEditable(_ isEditable: Bool = true) -> ChainBox<T> {
+    func isEditable(_ isEditable: Bool) -> ChainBox<T> {
         value.isEditable = isEditable
         return value.x
     }
 
     @discardableResult
-    func isSelectable(_ isSelectable: Bool = true) -> ChainBox<T> {
+    func isSelectable(_ isSelectable: Bool) -> ChainBox<T> {
         value.isSelectable = isSelectable
         return value.x
     }
@@ -56,25 +56,25 @@ public extension ChainBox where T: UITextView {
     }
 
     @discardableResult
-    func textContainerInset(_ textContainerInset: UIEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)) -> ChainBox<T> {
+    func textContainerInset(_ textContainerInset: UIEdgeInsets) -> ChainBox<T> {
         value.textContainerInset = textContainerInset
         return value.x
     }
 
     @discardableResult
-    func returnKeyType(_ returnKeyType: UIReturnKeyType = .default) -> ChainBox<T> {
+    func returnKeyType(_ returnKeyType: UIReturnKeyType) -> ChainBox<T> {
         value.returnKeyType = returnKeyType
         return value.x
     }
 
     @discardableResult
-    func enablesReturnKeyAutomatically(_ enablesReturnKeyAutomatically: Bool = false) -> ChainBox<T> {
+    func enablesReturnKeyAutomatically(_ enablesReturnKeyAutomatically: Bool) -> ChainBox<T> {
         value.enablesReturnKeyAutomatically = enablesReturnKeyAutomatically
         return value.x
     }
 
     @discardableResult
-    func autocorrectionType(_ autocorrectionType: UITextAutocorrectionType = .default) -> ChainBox<T> {
+    func autocorrectionType(_ autocorrectionType: UITextAutocorrectionType) -> ChainBox<T> {
         value.autocorrectionType = autocorrectionType
         return value.x
     }

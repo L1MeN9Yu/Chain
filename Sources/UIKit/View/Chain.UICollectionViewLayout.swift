@@ -10,37 +10,37 @@ extension UICollectionViewFlowLayout: Compatible {}
 
 public extension ChainBox where T: UICollectionViewFlowLayout {
     @discardableResult
-    func itemSize(_ itemSize: CGSize = .zero) -> ChainBox<T> {
+    func itemSize(_ itemSize: CGSize) -> ChainBox<T> {
         value.itemSize = itemSize
         return value.x
     }
 
     @discardableResult
-    func minimumInteritemSpacing(_ minimumInteritemSpacing: CGFloat = 0) -> ChainBox<T> {
+    func minimumInteritemSpacing(_ minimumInteritemSpacing: CGFloat) -> ChainBox<T> {
         value.minimumInteritemSpacing = minimumInteritemSpacing
         return value.x
     }
 
     @discardableResult
-    func minimumLineSpacing(_ minimumLineSpacing: CGFloat = 0) -> ChainBox<T> {
+    func minimumLineSpacing(_ minimumLineSpacing: CGFloat) -> ChainBox<T> {
         value.minimumLineSpacing = minimumLineSpacing
         return value.x
     }
 
     @discardableResult
-    func scrollDirection(_ scrollDirection: UICollectionView.ScrollDirection = .horizontal) -> ChainBox<T> {
+    func scrollDirection(_ scrollDirection: UICollectionView.ScrollDirection) -> ChainBox<T> {
         value.scrollDirection = scrollDirection
         return value.x
     }
 
     @discardableResult
-    func estimatedItemSize(_ estimatedItemSize: CGSize = .zero) -> ChainBox<T> {
+    func estimatedItemSize(_ estimatedItemSize: CGSize) -> ChainBox<T> {
         value.estimatedItemSize = estimatedItemSize
         return value.x
     }
 
     @discardableResult
-    func sectionInset(_ sectionInset: UIEdgeInsets = .zero) -> ChainBox<T> {
+    func sectionInset(_ sectionInset: UIEdgeInsets) -> ChainBox<T> {
         value.sectionInset = sectionInset
         return value.x
     }

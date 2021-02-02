@@ -56,7 +56,7 @@ public extension ChainBox where T: UIView {
     }
 
     @discardableResult
-    func corners(_ corners: UIRectCorner, radius: CGFloat, isReset: Bool) -> ChainBox<T> {
+    func corners(_ corners: UIRectCorner, radius: CGFloat, isReset: Bool = false) -> ChainBox<T> {
         value.layoutIfNeeded()
 
         if #available(iOS 11, *) {

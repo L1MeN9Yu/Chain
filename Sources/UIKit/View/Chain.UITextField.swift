@@ -179,18 +179,21 @@ public extension ChainBox where T: UITextField {
         return value.x
     }
 
+    @available(iOS 11.0, *)
     @discardableResult
     func smartQuotesType(_ smartQuotesType: UITextSmartQuotesType) -> ChainBox<T> {
         value.smartQuotesType = smartQuotesType
         return value.x
     }
 
+    @available(iOS 11.0, *)
     @discardableResult
     func smartDashesType(_ smartDashesType: UITextSmartDashesType) -> ChainBox<T> {
         value.smartDashesType = smartDashesType
         return value.x
     }
 
+    @available(iOS 11.0, *)
     @discardableResult
     func smartInsertDeleteType(_ smartInsertDeleteType: UITextSmartInsertDeleteType) -> ChainBox<T> {
         value.smartInsertDeleteType = smartInsertDeleteType
@@ -227,12 +230,14 @@ public extension ChainBox where T: UITextField {
         return value.x
     }
 
+    @available(iOS 10.0, *)
     @discardableResult
     func textContentType(_ textContentType: UITextContentType?) -> ChainBox<T> {
         value.textContentType = textContentType
         return value.x
     }
 
+    @available(iOS 12.0, *)
     @discardableResult
     func passwordRules(_ passwordRules: UITextInputPasswordRules?) -> ChainBox<T> {
         value.passwordRules = passwordRules

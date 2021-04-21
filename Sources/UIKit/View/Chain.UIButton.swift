@@ -73,7 +73,7 @@ public extension ChainBox where T: UIButton {
         return value.x
     }
 
-    func setAttributedTitle(_ title: NSAttributedString?, for state: UIControl.State) {
+    func setAttributedTitle(_ title: NSAttributedString?, for state: UIControl.State) -> ChainBox<T> {
         value.setAttributedTitle(title, for: state)
         return value.x
     }

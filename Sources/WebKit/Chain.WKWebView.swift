@@ -5,8 +5,6 @@
 
 import WebKit
 
-extension WKWebView: Compatible {}
-
 public extension ChainBox where T == WKWebView {
     func navigationDelegate(_ navigationDelegate: WKNavigationDelegate?) -> ChainBox<T> {
         value.navigationDelegate = navigationDelegate

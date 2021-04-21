@@ -36,6 +36,12 @@ public extension ChainBox where T: UIControl {
         value.contentHorizontalAlignment = contentHorizontalAlignment
         return value.x
     }
+
+    @discardableResult
+    func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControl.Event) -> ChainBox<T> {
+        value.addTarget(target, action: action, for: controlEvents)
+        return value.x
+    }
 }
 
 #endif

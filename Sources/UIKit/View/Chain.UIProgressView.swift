@@ -7,22 +7,26 @@
 import UIKit.UIProgressView
 
 public extension ChainBox where T: UIProgressView {
-    func progressTintColor(_ progressTintColor: UIColor?) -> ChainBox<T> {
+    @discardableResult
+    func progressTintColor(_ progressTintColor: UIColor?) -> ChainBox {
         value.progressTintColor = progressTintColor
         return value.x
     }
 
-    func trackTintColor(_ trackTintColor: UIColor?) -> ChainBox<T> {
+    @discardableResult
+    func trackTintColor(_ trackTintColor: UIColor?) -> ChainBox {
         value.trackTintColor = trackTintColor
         return value.x
     }
 
-    func progressImage(_ progressImage: UIImage?) -> ChainBox<T> {
+    @discardableResult
+    func progressImage(_ progressImage: UIImage?) -> ChainBox {
         value.progressImage = progressImage
         return value.x
     }
 
-    func trackImage(_ trackImage: UIImage?) -> ChainBox<T> {
+    @discardableResult
+    func trackImage(_ trackImage: UIImage?) -> ChainBox {
         value.trackImage = trackImage
         return value.x
     }

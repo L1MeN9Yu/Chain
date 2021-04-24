@@ -10,44 +10,44 @@ extension UIView: Compatible {}
 
 public extension ChainBox where T: UIView {
     @discardableResult
-    func isHidden(_ isHidden: Bool) -> ChainBox<T> {
+    func isHidden(_ isHidden: Bool) -> ChainBox {
         value.isHidden = isHidden
         return value.x
     }
 
     @discardableResult
-    func clipsToBounds(_ clipsToBounds: Bool = true) -> ChainBox<T> {
+    func clipsToBounds(_ clipsToBounds: Bool = true) -> ChainBox {
         value.clipsToBounds = clipsToBounds
         return value.x
     }
 
     @discardableResult
-    func backgroundColor(_ color: UIColor?) -> ChainBox<T> {
+    func backgroundColor(_ color: UIColor?) -> ChainBox {
         value.backgroundColor = color
         return value.x
     }
 
     @discardableResult
-    func contentMode(_ contentModel: UIView.ContentMode = .scaleToFill) -> ChainBox<T> {
+    func contentMode(_ contentModel: UIView.ContentMode = .scaleToFill) -> ChainBox {
         value.contentMode = contentModel
         return value.x
     }
 
     @discardableResult
-    func tintColor(_ tintColor: UIColor?) -> ChainBox<T> {
+    func tintColor(_ tintColor: UIColor?) -> ChainBox {
         value.tintColor = tintColor
         return value.x
     }
 
     @discardableResult
-    func border(color: UIColor?, width: CGFloat) -> ChainBox<T> {
+    func border(color: UIColor?, width: CGFloat) -> ChainBox {
         value.layer.borderColor = color?.cgColor
         value.layer.borderWidth = width
         return value.x
     }
 
     @discardableResult
-    func shadow(color: UIColor?, offset: CGSize, opacity: Float, radius: CGFloat) -> ChainBox<T> {
+    func shadow(color: UIColor?, offset: CGSize, opacity: Float, radius: CGFloat) -> ChainBox {
         value.layer.shadowColor = color?.cgColor
         value.layer.shadowOffset = offset
         value.layer.shadowOpacity = opacity
@@ -56,7 +56,7 @@ public extension ChainBox where T: UIView {
     }
 
     @discardableResult
-    func corners(_ corners: UIRectCorner = .allCorners, radius: CGFloat, isReset: Bool = false) -> ChainBox<T> {
+    func corners(_ corners: UIRectCorner = .allCorners, radius: CGFloat, isReset: Bool = false) -> ChainBox {
         value.layoutIfNeeded()
 
         if #available(iOS 11, *) {

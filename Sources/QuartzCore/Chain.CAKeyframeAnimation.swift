@@ -1,22 +1,26 @@
 //
 // Created by Mengyu Li on 2020/11/9.
 //
+
 #if canImport(QuartzCore)
 
 import QuartzCore
 
 public extension ChainBox where T == CAKeyframeAnimation {
-    func values(_ values: [Any]?) -> ChainBox<T> {
+    @discardableResult
+    func values(_ values: [Any]?) -> ChainBox {
         value.values = values
         return value.x
     }
 
-    func path(_ path: CGPath? = nil) -> ChainBox<T> {
+    @discardableResult
+    func path(_ path: CGPath? = nil) -> ChainBox {
         value.path = path
         return value.x
     }
 
-    func keyTimes(_ keyTimes: [NSNumber]?) -> ChainBox<T> {
+    @discardableResult
+    func keyTimes(_ keyTimes: [NSNumber]?) -> ChainBox {
         let kt = keyTimes?.map { number -> NSNumber in
             var num = number
             if num.intValue > 1 { num = NSNumber(integerLiteral: 1) }
@@ -27,32 +31,38 @@ public extension ChainBox where T == CAKeyframeAnimation {
         return value.x
     }
 
-    func timingFunctions(_ timingFunctions: [CAMediaTimingFunction]?) -> ChainBox<T> {
+    @discardableResult
+    func timingFunctions(_ timingFunctions: [CAMediaTimingFunction]?) -> ChainBox {
         value.timingFunctions = timingFunctions
         return value.x
     }
 
-    func calculationMode(_ calculationMode: CAAnimationCalculationMode) -> ChainBox<T> {
+    @discardableResult
+    func calculationMode(_ calculationMode: CAAnimationCalculationMode) -> ChainBox {
         value.calculationMode = calculationMode
         return value.x
     }
 
-    func tensionValues(_ tensionValues: [NSNumber]?) -> ChainBox<T> {
+    @discardableResult
+    func tensionValues(_ tensionValues: [NSNumber]?) -> ChainBox {
         value.tensionValues = tensionValues
         return value.x
     }
 
-    func continuityValues(_ continuityValues: [NSNumber]?) -> ChainBox<T> {
+    @discardableResult
+    func continuityValues(_ continuityValues: [NSNumber]?) -> ChainBox {
         value.continuityValues = continuityValues
         return value.x
     }
 
-    func biasValues(_ biasValues: [NSNumber]?) -> ChainBox<T> {
+    @discardableResult
+    func biasValues(_ biasValues: [NSNumber]?) -> ChainBox {
         value.biasValues = biasValues
         return value.x
     }
 
-    func rotationMode(_ rotationMode: CAAnimationRotationMode?) -> ChainBox<T> {
+    @discardableResult
+    func rotationMode(_ rotationMode: CAAnimationRotationMode?) -> ChainBox {
         value.rotationMode = rotationMode
         return value.x
     }

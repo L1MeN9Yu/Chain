@@ -10,19 +10,19 @@ extension UIAlertController: Compatible {}
 
 public extension ChainBox where T: UIAlertController {
     @discardableResult
-    func addAction(_ action: UIAlertAction) -> ChainBox<T> {
+    func addAction(_ action: UIAlertAction) -> ChainBox {
         value.addAction(action)
         return value.x
     }
 
     @discardableResult
-    func addTextField(_ configurationHandler: ((UITextField) -> ())? = nil) -> ChainBox<T> {
+    func addTextField(_ configurationHandler: ((UITextField) -> ())? = nil) -> ChainBox {
         value.addTextField(configurationHandler: configurationHandler)
         return value.x
     }
 
     @discardableResult
-    func show(in viewController: UIViewController) -> ChainBox<T> {
+    func show(in viewController: UIViewController) -> ChainBox {
         viewController.present(value, animated: true)
         return value.x
     }

@@ -8,36 +8,37 @@ import UIKit.UITableView
 
 public extension ChainBox where T: UITableView {
     @discardableResult
-    func delegate(_ delegate: UITableViewDelegate?) -> ChainBox<T> {
+    func delegate(_ delegate: UITableViewDelegate?) -> ChainBox {
         value.delegate = delegate
         return value.x
     }
 
     @discardableResult
-    func dataSource(_ dataSource: UITableViewDataSource?) -> ChainBox<T> {
+    func dataSource(_ dataSource: UITableViewDataSource?) -> ChainBox {
         value.dataSource = dataSource
         return value.x
     }
 
-    func separatorStyle(_ separatorStyle: UITableViewCell.SeparatorStyle = .singleLine) -> ChainBox<T> {
+    @discardableResult
+    func separatorStyle(_ separatorStyle: UITableViewCell.SeparatorStyle = .singleLine) -> ChainBox {
         value.separatorStyle = separatorStyle
         return value.x
     }
 
     @discardableResult
-    func separatorInset(_ separatorInset: UIEdgeInsets) -> ChainBox<T> {
+    func separatorInset(_ separatorInset: UIEdgeInsets) -> ChainBox {
         value.separatorInset = separatorInset
         return value.x
     }
 
     @discardableResult
-    func registerCell(_ cellClass: AnyClass?, _ identifier: String) -> ChainBox<T> {
+    func registerCell(_ cellClass: AnyClass?, _ identifier: String) -> ChainBox {
         value.register(cellClass, forCellReuseIdentifier: identifier)
         return value.x
     }
 
     @discardableResult
-    func registerHeaderOrFooter(_ itemClass: AnyClass?, _ identifier: String) -> ChainBox<T> {
+    func registerHeaderOrFooter(_ itemClass: AnyClass?, _ identifier: String) -> ChainBox {
         value.register(itemClass, forHeaderFooterViewReuseIdentifier: identifier)
         return value.x
     }
@@ -45,7 +46,7 @@ public extension ChainBox where T: UITableView {
     @discardableResult
     func estimatedHeight(_ rowHeight: CGFloat = 0,
                          _ sectionHeaderHeight: CGFloat = 0,
-                         _ SectionFooterHeight: CGFloat = 0) -> ChainBox<T>
+                         _ SectionFooterHeight: CGFloat = 0) -> ChainBox
     {
         value.estimatedRowHeight = rowHeight
         value.estimatedSectionHeaderHeight = sectionHeaderHeight
@@ -54,19 +55,19 @@ public extension ChainBox where T: UITableView {
     }
 
     @discardableResult
-    func disableContentInset(_ disableContentInset: Bool) -> ChainBox<T> {
+    func disableContentInset(_ disableContentInset: Bool) -> ChainBox {
         if #available(iOS 11, *) {
             value.contentInsetAdjustmentBehavior = .never
         }
         return value.x
     }
 
-    func tableHeaderView(_ tableHeaderView: UIView?) -> ChainBox<T> {
+    func tableHeaderView(_ tableHeaderView: UIView?) -> ChainBox {
         value.tableHeaderView = tableHeaderView
         return value.x
     }
 
-    func tableFooterView(_ tableFooterView: UIView?) -> ChainBox<T> {
+    func tableFooterView(_ tableFooterView: UIView?) -> ChainBox {
         value.tableFooterView = tableFooterView
         return value.x
     }

@@ -7,62 +7,74 @@
 import UIKit.UISlider
 
 public extension ChainBox where T: UISlider {
-    func value(_ value: Float) -> ChainBox<T> {
+    @discardableResult
+    func value(_ value: Float) -> ChainBox {
         self.value.value = value
         return self.value.x
     }
 
-    func minimumValue(_ minimumValue: Float) -> ChainBox<T> {
+    @discardableResult
+    func minimumValue(_ minimumValue: Float) -> ChainBox {
         value.minimumValue = minimumValue
         return value.x
     }
 
-    func maximumValue(_ maximumValue: Float) -> ChainBox<T> {
+    @discardableResult
+    func maximumValue(_ maximumValue: Float) -> ChainBox {
         value.maximumValue = maximumValue
         return value.x
     }
 
-    func minimumValueImage(_ minimumValueImage: UIImage?) -> ChainBox<T> {
+    @discardableResult
+    func minimumValueImage(_ minimumValueImage: UIImage?) -> ChainBox {
         value.minimumValueImage = minimumValueImage
         return value.x
     }
 
-    func maximumValueImage(_ maximumValueImage: UIImage?) -> ChainBox<T> {
+    @discardableResult
+    func maximumValueImage(_ maximumValueImage: UIImage?) -> ChainBox {
         value.maximumValueImage = maximumValueImage
         return value.x
     }
 
-    func isContinuous(_ isContinuous: Bool) -> ChainBox<T> {
+    @discardableResult
+    func isContinuous(_ isContinuous: Bool) -> ChainBox {
         value.isContinuous = isContinuous
         return value.x
     }
 
-    func minimumTrackTintColor(_ minimumTrackTintColor: UIColor?) -> ChainBox<T> {
+    @discardableResult
+    func minimumTrackTintColor(_ minimumTrackTintColor: UIColor?) -> ChainBox {
         value.minimumTrackTintColor = minimumTrackTintColor
         return value.x
     }
 
-    func maximumTrackTintColor(_ maximumTrackTintColor: UIColor?) -> ChainBox<T> {
+    @discardableResult
+    func maximumTrackTintColor(_ maximumTrackTintColor: UIColor?) -> ChainBox {
         value.maximumTrackTintColor = maximumTrackTintColor
         return value.x
     }
 
-    func thumbTintColor(_ thumbTintColor: UIColor?) -> ChainBox<T> {
+    @discardableResult
+    func thumbTintColor(_ thumbTintColor: UIColor?) -> ChainBox {
         value.thumbTintColor = thumbTintColor
         return value.x
     }
 
-    func setThumbImage(_ image: UIImage?, for state: UIControl.State) -> ChainBox<T> {
+    @discardableResult
+    func setThumbImage(_ image: UIImage?, for state: UIControl.State) -> ChainBox {
         value.setThumbImage(image, for: state)
         return value.x
     }
 
-    func setMinimumTrackImage(_ image: UIImage?, for state: UIControl.State) -> ChainBox<T> {
+    @discardableResult
+    func setMinimumTrackImage(_ image: UIImage?, for state: UIControl.State) -> ChainBox {
         value.setMinimumTrackImage(image, for: state)
         return value.x
     }
 
-    func setMaximumTrackImage(_ image: UIImage?, for state: UIControl.State) -> ChainBox<T> {
+    @discardableResult
+    func setMaximumTrackImage(_ image: UIImage?, for state: UIControl.State) -> ChainBox {
         value.setMaximumTrackImage(image, for: state)
         return value.x
     }

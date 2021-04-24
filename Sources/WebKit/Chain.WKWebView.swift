@@ -6,12 +6,14 @@
 import WebKit
 
 public extension ChainBox where T == WKWebView {
-    func navigationDelegate(_ navigationDelegate: WKNavigationDelegate?) -> ChainBox<T> {
+    @discardableResult
+    func navigationDelegate(_ navigationDelegate: WKNavigationDelegate?) -> ChainBox {
         value.navigationDelegate = navigationDelegate
         return value.x
     }
 
-    func uiDelegate(_ uiDelegate: WKUIDelegate?) -> ChainBox<T> {
+    @discardableResult
+    func uiDelegate(_ uiDelegate: WKUIDelegate?) -> ChainBox {
         value.uiDelegate = uiDelegate
         return value.x
     }

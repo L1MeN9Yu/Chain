@@ -10,19 +10,19 @@ extension UIImagePickerController: Compatible {}
 
 public extension ChainBox where T: UIImagePickerController {
     @discardableResult
-    func delegate(_ delegate: (UIImagePickerControllerDelegate & UINavigationControllerDelegate)?) -> ChainBox<T> {
+    func delegate(_ delegate: (UIImagePickerControllerDelegate & UINavigationControllerDelegate)?) -> ChainBox {
         value.delegate = delegate
         return value.x
     }
 
     @discardableResult
-    func sourceType(_ sourceType: UIImagePickerController.SourceType) -> ChainBox<T> {
+    func sourceType(_ sourceType: UIImagePickerController.SourceType) -> ChainBox {
         value.sourceType = sourceType
         return value.x
     }
 
     @discardableResult
-    func mediaTypes(_ mediaTypes: [String]) -> ChainBox<T> {
+    func mediaTypes(_ mediaTypes: [String]) -> ChainBox {
         value.mediaTypes = mediaTypes
         return value.x
     }

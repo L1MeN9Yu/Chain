@@ -7,22 +7,26 @@
 import QuartzCore
 
 public extension ChainBox where T == CATransition {
-    func type(_ type: CATransitionType) -> ChainBox<T> {
+    @discardableResult
+    func type(_ type: CATransitionType) -> ChainBox {
         value.type = type
         return value.x
     }
 
-    func subtype(_ subtype: CATransitionSubtype?) -> ChainBox<T> {
+    @discardableResult
+    func subtype(_ subtype: CATransitionSubtype?) -> ChainBox {
         value.subtype = subtype
         return value.x
     }
 
-    func startProgress(_ startProgress: Float) -> ChainBox<T> {
+    @discardableResult
+    func startProgress(_ startProgress: Float) -> ChainBox {
         value.startProgress = startProgress
         return value.x
     }
 
-    func endProgress(_ endProgress: Float) -> ChainBox<T> {
+    @discardableResult
+    func endProgress(_ endProgress: Float) -> ChainBox {
         value.endProgress = endProgress
         return value.x
     }

@@ -7,7 +7,8 @@
 import QuartzCore
 
 public extension ChainBox where T == CAAnimationGroup {
-    func animations(_ animations: [CAAnimation]?) -> ChainBox<T> {
+    @discardableResult
+    func animations(_ animations: [CAAnimation]?) -> ChainBox {
         value.animations = animations
         return value.x
     }

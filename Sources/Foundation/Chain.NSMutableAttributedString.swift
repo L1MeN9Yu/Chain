@@ -16,7 +16,7 @@ public extension ChainBox where T == NSMutableAttributedString {
     ///
     /// - default range: self.length文本长度
     @discardableResult
-    func append(_ attrString: NSAttributedString) -> ChainBox<T> {
+    func append(_ attrString: NSAttributedString) -> ChainBox {
         value.append(attrString)
         return value.x
     }
@@ -25,7 +25,7 @@ public extension ChainBox where T == NSMutableAttributedString {
     ///
     /// - default range: self.length文本长度
     @discardableResult
-    func font(_ font: Font, range: NSRange? = nil) -> ChainBox<T> {
+    func font(_ font: Font, range: NSRange? = nil) -> ChainBox {
         value.addAttribute(.font, value: font, range: value.usedRange(range))
         return value.x
     }
@@ -35,7 +35,7 @@ public extension ChainBox where T == NSMutableAttributedString {
     /// - default paragraphStyle: .default
     /// - default range: self.length文本长度
     @discardableResult
-    func paragraph(_ paragraphStyle: NSParagraphStyle = .default, range: NSRange? = nil) -> ChainBox<T> {
+    func paragraph(_ paragraphStyle: NSParagraphStyle = .default, range: NSRange? = nil) -> ChainBox {
         value.addAttribute(.paragraphStyle, value: paragraphStyle, range: value.usedRange(range))
         return value.x
     }
@@ -44,7 +44,7 @@ public extension ChainBox where T == NSMutableAttributedString {
     ///
     /// - default range: self.length文本长度
     @discardableResult
-    func textColor(_ foregroundColor: Color, range: NSRange? = nil) -> ChainBox<T> {
+    func textColor(_ foregroundColor: Color, range: NSRange? = nil) -> ChainBox {
         value.addAttribute(.foregroundColor, value: foregroundColor, range: value.usedRange(range))
         return value.x
     }
@@ -53,7 +53,7 @@ public extension ChainBox where T == NSMutableAttributedString {
     ///
     /// - default range: self.length文本长度
     @discardableResult
-    func backgroundColor(_ backgroundColor: Color, range: NSRange? = nil) -> ChainBox<T> {
+    func backgroundColor(_ backgroundColor: Color, range: NSRange? = nil) -> ChainBox {
         value.addAttribute(.backgroundColor, value: backgroundColor, range: value.usedRange(range))
         return value.x
     }
@@ -63,7 +63,7 @@ public extension ChainBox where T == NSMutableAttributedString {
     /// - default kern: 0
     /// - default range: self.length文本长度
     @discardableResult
-    func kern(_ kern: Double = 0, range: NSRange? = nil) -> ChainBox<T> {
+    func kern(_ kern: Double = 0, range: NSRange? = nil) -> ChainBox {
         value.addAttribute(.kern, value: NSNumber(floatLiteral: kern), range: value.usedRange(range))
         return value.x
     }
@@ -73,7 +73,7 @@ public extension ChainBox where T == NSMutableAttributedString {
     /// - default haveStrikethrough: 无删除线
     /// - default range: self.length文本长度
     @discardableResult
-    func haveStrikethrough(_ haveStrikethrough: Bool = false, range: NSRange? = nil) -> ChainBox<T> {
+    func haveStrikethrough(_ haveStrikethrough: Bool = false, range: NSRange? = nil) -> ChainBox {
         let strikethroughStyle = haveStrikethrough ? NSNumber(floatLiteral: 1) : NSNumber(floatLiteral: 0)
         value.addAttribute(.strikethroughStyle, value: strikethroughStyle, range: value.usedRange(range))
         return value.x
@@ -83,7 +83,7 @@ public extension ChainBox where T == NSMutableAttributedString {
     ///
     /// - default range: self.length文本长度
     @discardableResult
-    func strikethroughColor(_ strikethroughColor: Color, range: NSRange? = nil) -> ChainBox<T> {
+    func strikethroughColor(_ strikethroughColor: Color, range: NSRange? = nil) -> ChainBox {
         value.addAttribute(.strikethroughColor, value: strikethroughColor, range: value.usedRange(range))
         return value.x
     }
@@ -93,7 +93,7 @@ public extension ChainBox where T == NSMutableAttributedString {
     /// - default underlineStyle: 无下划线
     /// - default range: self.length文本长度
     @discardableResult
-    func haveUnderline(_ haveUnderline: Bool = false, range: NSRange? = nil) -> ChainBox<T> {
+    func haveUnderline(_ haveUnderline: Bool = false, range: NSRange? = nil) -> ChainBox {
         let underlineStyle = haveUnderline ? NSNumber(floatLiteral: 1) : NSNumber(floatLiteral: 0)
         value.addAttribute(.underlineStyle, value: underlineStyle, range: value.usedRange(range))
         return value.x
@@ -103,7 +103,7 @@ public extension ChainBox where T == NSMutableAttributedString {
     ///
     /// - default range: self.length文本长度
     @discardableResult
-    func underlineColor(_ underlineColor: Color, range: NSRange? = nil) -> ChainBox<T> {
+    func underlineColor(_ underlineColor: Color, range: NSRange? = nil) -> ChainBox {
         value.addAttribute(.underlineColor, value: underlineColor, range: value.usedRange(range))
         return value.x
     }
@@ -112,7 +112,7 @@ public extension ChainBox where T == NSMutableAttributedString {
     ///
     /// - default range: self.length文本长度
     @discardableResult
-    func link(_ linkURL: URL, range: NSRange? = nil) -> ChainBox<T> {
+    func link(_ linkURL: URL, range: NSRange? = nil) -> ChainBox {
         value.addAttribute(.link, value: linkURL, range: value.usedRange(range))
         return value.x
     }

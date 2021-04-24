@@ -8,92 +8,108 @@ import WebKit
 extension WKWebViewConfiguration: Compatible {}
 
 public extension ChainBox where T == WKWebViewConfiguration {
-    func processPool(_ processPool: WKProcessPool) -> ChainBox<T> {
+    @discardableResult
+    func processPool(_ processPool: WKProcessPool) -> ChainBox {
         value.processPool = processPool
         return value.x
     }
 
-    func preferences(_ preferences: WKPreferences) -> ChainBox<T> {
+    @discardableResult
+    func preferences(_ preferences: WKPreferences) -> ChainBox {
         value.preferences = preferences
         return value.x
     }
 
-    func userContentController(_ userContentController: WKUserContentController) -> ChainBox<T> {
+    @discardableResult
+    func userContentController(_ userContentController: WKUserContentController) -> ChainBox {
         value.userContentController = userContentController
         return value.x
     }
 
     @available(iOS 9.0, *)
-    func websiteDataStore(_ websiteDataStore: WKWebsiteDataStore) -> ChainBox<T> {
+    @discardableResult
+    func websiteDataStore(_ websiteDataStore: WKWebsiteDataStore) -> ChainBox {
         value.websiteDataStore = websiteDataStore
         return value.x
     }
 
-    func suppressesIncrementalRendering(_ suppressesIncrementalRendering: Bool) -> ChainBox<T> {
+    @discardableResult
+    func suppressesIncrementalRendering(_ suppressesIncrementalRendering: Bool) -> ChainBox {
         value.suppressesIncrementalRendering = suppressesIncrementalRendering
         return value.x
     }
 
     @available(iOS 9.0, *)
-    func applicationNameForUserAgent(_ applicationNameForUserAgent: String?) -> ChainBox<T> {
+    @discardableResult
+    func applicationNameForUserAgent(_ applicationNameForUserAgent: String?) -> ChainBox {
         value.applicationNameForUserAgent = applicationNameForUserAgent
         return value.x
     }
 
     @available(iOS 9.0, *)
-    func allowsAirPlayForMediaPlayback(_ allowsAirPlayForMediaPlayback: Bool) -> ChainBox<T> {
+    @discardableResult
+    func allowsAirPlayForMediaPlayback(_ allowsAirPlayForMediaPlayback: Bool) -> ChainBox {
         value.allowsAirPlayForMediaPlayback = allowsAirPlayForMediaPlayback
         return value.x
     }
 
     @available(iOS 10.0, *)
-    func mediaTypesRequiringUserActionForPlayback(_ mediaTypesRequiringUserActionForPlayback: WKAudiovisualMediaTypes) -> ChainBox<T> {
+    @discardableResult
+    func mediaTypesRequiringUserActionForPlayback(_ mediaTypesRequiringUserActionForPlayback: WKAudiovisualMediaTypes) -> ChainBox {
         value.mediaTypesRequiringUserActionForPlayback = mediaTypesRequiringUserActionForPlayback
         return value.x
     }
 
     @available(iOS 13.0, *)
-    func defaultWebpagePreferences(_ defaultWebpagePreferences: WKWebpagePreferences!) -> ChainBox<T> {
+    @discardableResult
+    func defaultWebpagePreferences(_ defaultWebpagePreferences: WKWebpagePreferences?) -> ChainBox {
         value.defaultWebpagePreferences = defaultWebpagePreferences
         return value.x
     }
 
     @available(iOS 14.0, *)
-    func limitsNavigationsToAppBoundDomains(_ limitsNavigationsToAppBoundDomains: Bool) -> ChainBox<T> {
+    @discardableResult
+    func limitsNavigationsToAppBoundDomains(_ limitsNavigationsToAppBoundDomains: Bool) -> ChainBox {
         value.limitsNavigationsToAppBoundDomains = limitsNavigationsToAppBoundDomains
         return value.x
     }
 
-    func allowsInlineMediaPlayback(_ allowsInlineMediaPlayback: Bool) -> ChainBox<T> {
+    @discardableResult
+    func allowsInlineMediaPlayback(_ allowsInlineMediaPlayback: Bool) -> ChainBox {
         value.allowsInlineMediaPlayback = allowsInlineMediaPlayback
         return value.x
     }
 
-    func selectionGranularity(_ selectionGranularity: WKSelectionGranularity) -> ChainBox<T> {
+    @discardableResult
+    func selectionGranularity(_ selectionGranularity: WKSelectionGranularity) -> ChainBox {
         value.selectionGranularity = selectionGranularity
         return value.x
     }
 
     @available(iOS 9.0, *)
-    func allowsPictureInPictureMediaPlayback(_ allowsPictureInPictureMediaPlayback: Bool) -> ChainBox<T> {
+    @discardableResult
+    func allowsPictureInPictureMediaPlayback(_ allowsPictureInPictureMediaPlayback: Bool) -> ChainBox {
         value.allowsPictureInPictureMediaPlayback = allowsPictureInPictureMediaPlayback
         return value.x
     }
 
     @available(iOS 10.0, *)
-    func dataDetectorTypes(_ dataDetectorTypes: WKDataDetectorTypes) -> ChainBox<T> {
+    @discardableResult
+    func dataDetectorTypes(_ dataDetectorTypes: WKDataDetectorTypes) -> ChainBox {
         value.dataDetectorTypes = dataDetectorTypes
         return value.x
     }
 
     @available(iOS 10.0, *)
-    func ignoresViewportScaleLimits(_ ignoresViewportScaleLimits: Bool) -> ChainBox<T> {
+    @discardableResult
+    func ignoresViewportScaleLimits(_ ignoresViewportScaleLimits: Bool) -> ChainBox {
         value.ignoresViewportScaleLimits = ignoresViewportScaleLimits
         return value.x
     }
 
     @available(iOS 11.0, *)
-    func setURLSchemeHandler(_ urlSchemeHandler: WKURLSchemeHandler?, forURLScheme urlScheme: String) -> ChainBox<T> {
+    @discardableResult
+    func setURLSchemeHandler(_ urlSchemeHandler: WKURLSchemeHandler?, forURLScheme urlScheme: String) -> ChainBox {
         value.setURLSchemeHandler(urlSchemeHandler, forURLScheme: urlScheme)
         return value.x
     }

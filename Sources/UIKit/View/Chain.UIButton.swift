@@ -8,72 +8,80 @@ import UIKit.UIButton
 
 public extension ChainBox where T: UIButton {
     @discardableResult
-    func contentEdgeInsets(_ contentEdgeInsets: UIEdgeInsets) -> ChainBox<T> {
+    func contentEdgeInsets(_ contentEdgeInsets: UIEdgeInsets) -> ChainBox {
         value.contentEdgeInsets = contentEdgeInsets
         return value.x
     }
 
-    func titleEdgeInsets(_ titleEdgeInsets: UIEdgeInsets) -> ChainBox<T> {
+    @discardableResult
+    func titleEdgeInsets(_ titleEdgeInsets: UIEdgeInsets) -> ChainBox {
         value.titleEdgeInsets = titleEdgeInsets
         return value.x
     }
 
-    func reversesTitleShadowWhenHighlighted(_ reversesTitleShadowWhenHighlighted: Bool) -> ChainBox<T> {
+    @discardableResult
+    func reversesTitleShadowWhenHighlighted(_ reversesTitleShadowWhenHighlighted: Bool) -> ChainBox {
         value.reversesTitleShadowWhenHighlighted = reversesTitleShadowWhenHighlighted
         return value.x
     }
 
-    func imageEdgeInsets(_ imageEdgeInsets: UIEdgeInsets) -> ChainBox<T> {
+    @discardableResult
+    func imageEdgeInsets(_ imageEdgeInsets: UIEdgeInsets) -> ChainBox {
         value.imageEdgeInsets = imageEdgeInsets
         return value.x
     }
 
-    func adjustsImageWhenHighlighted(_ adjustsImageWhenHighlighted: Bool) -> ChainBox<T> {
+    @discardableResult
+    func adjustsImageWhenHighlighted(_ adjustsImageWhenHighlighted: Bool) -> ChainBox {
         value.adjustsImageWhenHighlighted = adjustsImageWhenHighlighted
         return value.x
     }
 
-    func adjustsImageWhenDisabled(_ adjustsImageWhenDisabled: Bool) -> ChainBox<T> {
+    @discardableResult
+    func adjustsImageWhenDisabled(_ adjustsImageWhenDisabled: Bool) -> ChainBox {
         value.adjustsImageWhenDisabled = adjustsImageWhenDisabled
         return value.x
     }
 
-    func showsTouchWhenHighlighted(_ showsTouchWhenHighlighted: Bool) -> ChainBox<T> {
+    @discardableResult
+    func showsTouchWhenHighlighted(_ showsTouchWhenHighlighted: Bool) -> ChainBox {
         value.showsTouchWhenHighlighted = showsTouchWhenHighlighted
         return value.x
     }
 
     @discardableResult
-    func setTitle(_ title: String?, for state: UIControl.State) -> ChainBox<T> {
+    func setTitle(_ title: String?, for state: UIControl.State) -> ChainBox {
         value.setTitle(title, for: state)
         return value.x
     }
 
     @discardableResult
-    func setTitleColor(_ color: UIColor?, for state: UIControl.State) -> ChainBox<T> {
+    func setTitleColor(_ color: UIColor?, for state: UIControl.State) -> ChainBox {
         value.setTitleColor(color, for: state)
         return value.x
     }
 
     @discardableResult
-    func setImage(_ image: UIImage?, for state: UIControl.State) -> ChainBox<T> {
+    func setImage(_ image: UIImage?, for state: UIControl.State) -> ChainBox {
         value.setImage(image, for: state)
         return value.x
     }
 
     @discardableResult
-    func setBackgroundImage(_ image: UIImage?, for state: UIControl.State) -> ChainBox<T> {
+    func setBackgroundImage(_ image: UIImage?, for state: UIControl.State) -> ChainBox {
         value.setBackgroundImage(image, for: state)
         return value.x
     }
 
     @available(iOS 13.0, *)
-    func setPreferredSymbolConfiguration(_ configuration: UIImage.SymbolConfiguration?, forImageIn state: UIControl.State) -> ChainBox<T> {
+    @discardableResult
+    func setPreferredSymbolConfiguration(_ configuration: UIImage.SymbolConfiguration?, forImageIn state: UIControl.State) -> ChainBox {
         value.setPreferredSymbolConfiguration(configuration, forImageIn: state)
         return value.x
     }
 
-    func setAttributedTitle(_ title: NSAttributedString?, for state: UIControl.State) -> ChainBox<T> {
+    @discardableResult
+    func setAttributedTitle(_ title: NSAttributedString?, for state: UIControl.State) -> ChainBox {
         value.setAttributedTitle(title, for: state)
         return value.x
     }
@@ -81,7 +89,7 @@ public extension ChainBox where T: UIButton {
 
 public extension ChainBox where T: UIButton {
     @discardableResult
-    func titleFont(font: UIFont) -> ChainBox<T> {
+    func titleFont(font: UIFont) -> ChainBox {
         value.titleLabel?.font = font
         return value.x
     }
